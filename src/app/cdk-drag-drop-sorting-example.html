@@ -1,0 +1,11 @@
+<div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+  <div class="example-box" *ngFor="let movie of moviesSorted" cdkDrag>
+    {{movie.rank}}: {{movie.name}}
+  </div>
+  <pre [innerHTML]="movies | json"></pre>
+</div>
+
+
+<!-- Copyright 2019 Google LLC. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at http://angular.io/license -->
