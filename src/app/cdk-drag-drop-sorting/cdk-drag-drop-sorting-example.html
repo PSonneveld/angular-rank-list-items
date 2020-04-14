@@ -1,9 +1,10 @@
 <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
-  <app-dragable-rankitem class="example-box" *ngFor="let movie of moviesSorted" cdkDrag [dragable]="true">
-    {{movie.rank}}: {{movie.name}}
-  </app-dragable-rankitem>
-  <pre [innerHTML]="movies | json"></pre>
+      <app-dragable-rankitem class="example-box" *ngFor="let movie of moviesSorted" [dragable]="true">
+      {{movie.rank}}: {{movie.name}}
+    </app-dragable-rankitem>
 </div>
+
+  <pre [innerHTML]="movies | json"></pre>
 
 
 <!-- Copyright 2019 Google LLC. All Rights Reserved.
