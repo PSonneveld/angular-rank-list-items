@@ -1,5 +1,9 @@
 <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
-      <app-dragable-rankitem class="example-box" *ngFor="let movie of moviesSorted" [dragable]="true">
+      <app-dragable-rankitem class="example-box" 
+        *ngFor="let movie of moviesSorted; let i = index;" 
+        [dragable]="true" 
+        [deletable]="true"
+        (deleteClicked)="delete(i)">
       {{movie.rank}}: {{movie.name}}
     </app-dragable-rankitem>
 </div>

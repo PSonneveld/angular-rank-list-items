@@ -56,6 +56,10 @@ export class CdkDragDropSortingExample implements OnInit {
 
     this.moviesSorted.sort((a, b) => (a.rank > b.rank) ? 1 : -1);
   }
+
+  delete(index:number) {
+    console.log(index);
+  }
 }
 
 /**  Copyright 2019 Google LLC. All Rights Reserved.
