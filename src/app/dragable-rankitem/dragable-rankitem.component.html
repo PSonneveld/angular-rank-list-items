@@ -1,0 +1,13 @@
+<div *ngIf="dragable" class="prefix-content button-content">
+    <button class="dragable" mat-icon-button type="button" disabled>
+        <mat-icon cdkDragHandle>drag_indicator</mat-icon>
+    </button>
+</div>
+<div class="dynamic-content">
+    <ng-content></ng-content>
+</div>
+<div *ngIf="deletable" class="postfix-content button-content">
+    <button (click)="delete()" mat-icon-button type="button">
+        <mat-icon>delete_outline</mat-icon>
+    </button>
+</div>
